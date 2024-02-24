@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place an Order</title>
+</head>
+<body>
+    <h1>Place an Order</h1>
+    <form method="post" action="{{ url_for('order') }}">
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" name="customer_name" required><br>
+
+        <label for="order_info">Order Info:</label>
+        <input type="text" name="order_info" required><br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" required><br>
+
+        <input type="submit" value="Place Order">
+    </form>
+    <a href="{{ url_for('index') }}">Go back to Home</a>
+</body>
+</html>
